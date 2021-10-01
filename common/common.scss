@@ -12,6 +12,7 @@
   .first-box {
     display: flex;
     max-width: 80%;
+    justify-content: space-between;
     .heading {
       font-size: $font-up-2;
       font-weight: bold;
@@ -22,7 +23,10 @@
       color: var(--secondary-high);
     }
     .section-1{
-      margin-right: 20px;
+      max-width: 40%;
+    }
+    .section-2{
+      max-width: 50%;
     }
   }
   .second-box {
