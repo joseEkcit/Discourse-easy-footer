@@ -5,9 +5,19 @@ Heading:
     en: "Text for the heading in the footer - you can use your site name for example - Max length 25 characters"
 Blurb:
   default: "Ius vitae ornatus at, ei mea sumo quot dicant. Ei tale democritum eos, in mea timeam accumsan forensibus. Ei his aperiam suavitate. Et debitis convenire sea, viris dictas latine."
-  max: 180
+  max: 400
   description:
-    en: "Enter a short blurb about your community - Max length 180 characters"
+    en: "Enter a description for the second section - Max length 400 characters"
+Heading_2:
+  default: "Heading 2"
+  max: 25
+  description:
+    en: "Text for the second heading in the footer - Max length 25 characters"
+Blurb_2:
+  default: "Ius vitae ornatus at, ei mea sumo quot dicant. Ei tale democritum eos, in mea timeam accumsan forensibus. Ei his aperiam suavitate. Et debitis convenire sea, viris dictas latine."
+  max: 400
+  description:
+    en: "Enter a description for the second section - Max length 400 characters"
 Link_sections:
   type: list
   list_type: simple
