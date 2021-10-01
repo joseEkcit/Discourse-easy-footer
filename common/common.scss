@@ -10,7 +10,8 @@
     padding: 2em 0 1em 0;
   }
   .first-box {
-    max-width: 20%;
+    display: flex;
+    max-width: 80%;
     .heading {
       font-size: $font-up-2;
       font-weight: bold;
@@ -19,6 +20,13 @@
     }
     .blurb {
       color: var(--secondary-high);
+    }
+    .section_1{
+      max-width: 30%;
+      margin-right: 20px;
+    }
+    .section_2{
+      max-width: 70%;
     }
   }
   .second-box {
@@ -120,6 +128,9 @@
       .blurb {
         display: flex;
         align-items: center;
+      }
+      .section_1, .section_2{
+        max-width: 50%;
       }
     }
     .third-box {

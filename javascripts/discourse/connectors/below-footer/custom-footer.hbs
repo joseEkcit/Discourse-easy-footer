@@ -2,20 +2,24 @@
   <div class="wrap">
     <div class="flexbox">
       <div class="first-box">
-        <div class="heading">
-          {{mainHeading}}
+        <div class="section-1">
+          <div class="heading">
+            {{mainHeading}}
+          </div>
+          <div class="blurb">
+            {{blurb}}
+          </div>
         </div>
-        <div class="blurb">
-          {{blurb}}
+        <div class="section-2">
+          <div class="heading">
+            {{mainHeading2}}
+          </div>
+          <div class="blurb">
+            {{blurb2}}
+          </div>
         </div>
       </div>
       <div class="second-box">
-        <div class="heading">
-          {{mainHeading2}}
-        </div>
-        <div class="blurb">
-          {{blurb2}}
-        </div>
         <div class="links">
           {{#each linkSections as |section|}}
             <div class="list">
@@ -25,7 +29,12 @@
               <ul>
                 {{#each section.childLinks as |link|}}
                   <li class="footer-section-link-wrapper {{link.className}}">
-                    <a class="footer-section-link" title="{{link.title}}" href="{{link.href}}" target="{{link.target}}">
+                    <a
+                      class="footer-section-link"
+                      title="{{link.title}}"
+                      href="{{link.href}}"
+                      target="{{link.target}}"
+                    >
                       {{link.text}}
                     </a>
                   </li>
@@ -38,12 +47,22 @@
       <div class="third-box">
         <div class="footer-links">
           {{#each smallLinks as |link|}}
-            <a class="small-link {{link.className}}" title="{{link.title}}" target="{{link.target}}" href="{{link.href}}">{{link.text}}</a>
+            <a
+              class="small-link {{link.className}}"
+              title="{{link.title}}"
+              target="{{link.target}}"
+              href="{{link.href}}"
+            >{{link.text}}</a>
           {{/each}}
         </div>
         <div class="social">
           {{#each socialLinks as |link|}}
-            <a class="social-link {{link.className}}" title="{{link.title}}" target="{{link.target}}" href="{{link.href}}">{{d-icon link.icon}}</a>
+            <a
+              class="social-link {{link.className}}"
+              title="{{link.title}}"
+              target="{{link.target}}"
+              href="{{link.href}}"
+            >{{d-icon link.icon}}</a>
           {{/each}}
         </div>
       </div>
