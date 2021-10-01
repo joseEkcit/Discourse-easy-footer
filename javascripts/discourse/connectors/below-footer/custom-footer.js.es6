@@ -95,8 +95,7 @@ export default {
         blurb2: settings.Blurb_2,
         linkSections: sectionsArray,
         smallLinks: smallLinksArray,
-        socialLinks: socialLinksArray,
-        backgroundColor: settings.Background_color
+        socialLinks: socialLinksArray
       });
     } catch (error) {
       console.error(error);
