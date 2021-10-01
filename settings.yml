@@ -1,3 +1,8 @@
+Background_color:
+  default: ""
+  max: 15
+  description:
+    en: "Background color"
 Heading:
   default: "This is a header"
   max: 25
