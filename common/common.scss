@@ -19,8 +19,18 @@
     .section {
       width: 33%;
       max-width: 500px;
-      padding: 10px 15px;
 
+      &.links{
+        width: 20%;
+        ul {
+          list-style: none;
+          margin: 0;
+          min-width: 100px;
+        }
+        li {
+          margin: 0.5em 0;
+        }
+      }
       .heading {
         font-size: $font-up-2;
         font-weight: bold;
@@ -33,6 +43,7 @@
 
       @media (max-width: 768px) {
         width: 100%;
+        padding: 10px 15px;
         &.hide-on-mobile {
           padding: 0.4em 15px 0.4em 10px;
           margin: 0;
@@ -72,16 +83,6 @@
             }
           }
         }
-      }
-    }
-    .links {
-      ul {
-        list-style: none;
-        margin: 0;
-        min-width: 100px;
-      }
-      li {
-        margin: 0.5em 0;
       }
     }
     .navigatie {
