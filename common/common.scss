@@ -42,7 +42,7 @@
       }
 
       @media (max-width: 768px) {
-        width: 100%;
+        width: 100%!important;
         padding: 10px 15px;
         &.hide-on-mobile {
           padding: 0.4em 15px 0.4em 10px;
