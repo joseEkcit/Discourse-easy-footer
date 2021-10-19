@@ -13,24 +13,63 @@
     display: flex;
     max-width: 80%;
     justify-content: space-between;
-    .heading {
-      font-size: $font-up-2;
-      font-weight: bold;
-      margin-bottom: 0.5em;
-      display: block;
+    .section {
+      width: 33%;
+      max-width: 400px;
+      padding: 10px 15px;
+
+      .heading {
+        font-size: $font-up-2;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+        display: block;
+      }
+      .blurb {
+        color: var(--secondary-high);
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        &.hide-on-mobile {
+          .heading {
+            position: relative;
+            padding: 0.4em 15px 0.4em 10px;
+            margin: 0;
+            border-left: 5px solid transparent;
+            transition: border-color;
+
+            &::after {
+              content: "+";
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              position: absolute;
+              top: 50%;
+              margin-top: -0.7em;
+              right: 15px;
+              font-weight: 700;
+              font-size: 20px;
+              pointer-events: none;
+            }
+          }
+          .blurb {
+            transform: scaleY(0);
+            opacity: 0;
+            overflow: hidden;
+            transform-origin: left top;
+            transition: transform 0.1s ease-out, opacity 0.1s ease-out, max-height 0.1s ease-out;
+            max-height: 0;
+
+            &.foldout{
+              max-height: 2000px;
+              transform: scaleY(1);
+              opacity: 1;
+            }
+          }
+        }
+      }
     }
-    .blurb {
-      color: var(--secondary-high);
-    }
-    .section-1{
-      max-width: 40%;
-    }
-    .section-2{
-      max-width: 50%;
-    }
-  }
-  .second-box {
-    flex: 1;
     .links {
       display: flex;
       flex-wrap: wrap;
@@ -44,10 +83,11 @@
         margin: 0.5em 0;
       }
     }
-    .navigatie{
+    .navigatie {
       font-size: $font-up-2;
     }
   }
+
   .third-box {
     width: 100%;
     display: flex;

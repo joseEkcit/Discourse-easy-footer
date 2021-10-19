@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="flexbox">
       <div class="first-box">
-        <div class="section-1">
+        <div class="section section-1">
           <div class="heading">
             {{mainHeading}}
           </div>
@@ -10,7 +10,7 @@
             {{blurb}}
           </div>
         </div>
-        <div class="section-2">
+        <div class="section section-2 hide-on-mobile">
           <div class="heading">
             {{mainHeading2}}
           </div>
@@ -18,14 +18,15 @@
             {{blurb2}}
           </div>
         </div>
-      </div>
-      <div class="second-box">
-        <div class="links">
-          {{#each linkSections as |section|}}
-            <div class="list">
-              <span class="{{section.className}}" title="{{section.title}}">
-                {{section.text}}
-              </span>
+        {{#each linkSections as |section|}}
+          <div class="list section links hide-on-mobile">
+            <div
+              class="{{section.className}} heading"
+              title="{{section.title}}"
+            >
+              {{section.text}}
+            </div>
+            <div class="blurb">
               <ul>
                 {{#each section.childLinks as |link|}}
                   <li class="footer-section-link-wrapper {{link.className}}">
@@ -41,9 +42,10 @@
                 {{/each}}
               </ul>
             </div>
-          {{/each}}
-        </div>
+          </div>
+        {{/each}}
       </div>
+
       <div class="third-box">
         <div class="footer-links">
           {{#each smallLinks as |link|}}
