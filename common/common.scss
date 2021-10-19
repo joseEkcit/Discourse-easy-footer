@@ -13,9 +13,12 @@
     display: flex;
     max-width: 80%;
     justify-content: space-between;
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
     .section {
       width: 33%;
-      max-width: 400px;
+      max-width: 500px;
       padding: 10px 15px;
 
       .heading {
@@ -31,12 +34,12 @@
       @media (max-width: 768px) {
         width: 100%;
         &.hide-on-mobile {
+          padding: 0.4em 15px 0.4em 10px;
+          margin: 0;
+          border-left: 5px solid transparent;
+          transition: border-color;
           .heading {
             position: relative;
-            padding: 0.4em 15px 0.4em 10px;
-            margin: 0;
-            border-left: 5px solid transparent;
-            transition: border-color;
 
             &::after {
               content: "+";
@@ -58,10 +61,11 @@
             opacity: 0;
             overflow: hidden;
             transform-origin: left top;
-            transition: transform 0.1s ease-out, opacity 0.1s ease-out, max-height 0.1s ease-out;
+            transition: transform 0.1s ease-out, opacity 0.1s ease-out,
+              max-height 0.1s ease-out;
             max-height: 0;
 
-            &.foldout{
+            &.foldout {
               max-height: 2000px;
               transform: scaleY(1);
               opacity: 1;
@@ -71,9 +75,6 @@
       }
     }
     .links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
       ul {
         list-style: none;
         margin: 0;
