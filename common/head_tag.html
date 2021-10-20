@@ -1,0 +1,7 @@
+<script type="text/discourse-plugin" version="0.2">
+    api.onPageChange((url, title) => {
+            $('.hide-on-mobile .heading').on('click', function () {
+              $(this).parent().find('.blurb').toggleClass('foldout');
+            });
+        });
+    </script>
