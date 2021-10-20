@@ -56,9 +56,9 @@
               target="{{link.target}}"
               href="{{link.href}}"
             >{{link.text}}</a>
-            {{#if @first}}
-              ·
-            {{/if}}
+            {{#unless @last}}
+              <span class="footer-dot">·</span>
+            {{/unless}}
           {{/each}}
         </div>
         <div class="social">

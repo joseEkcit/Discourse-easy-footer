@@ -176,6 +176,9 @@
     }
     .third-box {
       margin-top: 0.5em;
+      .footer-links span:last-of-type{
+        display: none;
+      }
     }
     .second-box .links {
       justify-content: space-between;
