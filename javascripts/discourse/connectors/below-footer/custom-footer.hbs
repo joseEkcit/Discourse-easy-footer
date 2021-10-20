@@ -49,15 +49,16 @@
       <div class="third-box">
         <div class="footer-links">
           {{#each smallLinks as |link|}}
+            
             <a
               class="small-link {{link.className}}"
               title="{{link.title}}"
               target="{{link.target}}"
               href="{{link.href}}"
             >{{link.text}}</a>
-            {{#unless @last}}
+            {{#if @first}}
               ·
-            {{/unless}}
+            {{/if}}
           {{/each}}
         </div>
         <div class="social">
