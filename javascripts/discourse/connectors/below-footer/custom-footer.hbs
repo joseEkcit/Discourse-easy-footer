@@ -55,6 +55,9 @@
               target="{{link.target}}"
               href="{{link.href}}"
             >{{link.text}}</a>
+            {{#unless @last}}
+              ·
+            {{/unless}}
           {{/each}}
         </div>
         <div class="social">
