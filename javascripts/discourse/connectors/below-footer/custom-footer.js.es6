@@ -105,10 +105,3 @@ export default {
     }
   }
 };
-
-import $ from 'jquery';
-  $(function () {
-    $('.hide-on-mobile .heading').on('click', function () {
-      $(this).parent().find('.blurb').toggleClass('foldout');
-    });
-  });
